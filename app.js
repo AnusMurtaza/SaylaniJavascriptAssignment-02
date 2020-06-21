@@ -1,5 +1,3 @@
-
-
 function assignment21_25task1() {
     var fName = prompt("Enter Your First Name");
     var lName = prompt("Enter Your Last Name");
@@ -128,7 +126,7 @@ function assignment21_25task17() {
     document.write("User input : " + name + "<br>" + "Last character of input : " + lastCharacter)
 };
 
-// ****************************************************1st ASSIGNMENT ENDS************************************************************
+// ****************************************************ASSIGNMENT # 21-25 ENDS************************************************************
 
 
 
@@ -162,16 +160,25 @@ function assignment26_30task3() {
 };
 
 function assignment26_30task4() {
-
+    var diceRoll = Math.floor(Math.random() * 6) + 1;
+    alert("Random dice value : " + diceRoll);
 };
 
 function assignment26_30task5() {
+    var headTails = prompt("Enter 1 for Tails & 2 for Heads");
+    var diceRoll = Math.floor(Math.random() * 2) + 1;
 
+    if (diceRoll == headTails) {
+        alert("You Win the Toss")
+    }
+    else {
+        alert("Sorry ! You Lost the Toss")
+
+    }
 };
 
-function assignment26_30task6() 
-{
-    var num =Math.floor(Math.random() * 100);
+function assignment26_30task6() {
+    var num = Math.floor(Math.random() * 100);
     alert("Random number between 1 to 100 : " + num)
 };
 
@@ -179,12 +186,11 @@ function assignment26_30task7() {
 
 };
 
-function assignment26_30task8() 
-{
+function assignment26_30task8() {
 
     var guessNum = prompt("Guess the number between 1 and 10 ");
     var randomNum = Math.floor(Math.random() * 10);
- 
+
     if (guessNum == randomNum)
         alert("WOW ! You are so lucky your number is MATCHED");
     else
@@ -192,133 +198,235 @@ function assignment26_30task8()
 
 };
 
-// ****************************************************1st ASSIGNMENT ENDS************************************************************
+// ****************************************************ASSIGNMENT # 26-30 ENDS************************************************************
 
 
 
 
+function assignment31_34task1() {
+    var a = new Date();
+    document.write(a);
+};
 
+function assignment31_34task2() {
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var a = new Date();
+    var monthName = months[a.getMonth()];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-function assignmenttask1() {
+    alert("Current Month : " + monthName)
 
 };
 
-function assignmenttask2() {
+function assignment31_34task3() {
+    var date = new Date();
+    var a = date.toString();
+    var answer = a.slice(0, 3)
+    document.write("Today is " + answer);
+};
+
+function assignment31_34task4() {
+    var today = new Date();
+    if (today.getDay() == 6 || today.getDay() == 0) {
+        alert("It's Fun Day");
+    } else {
+        alert("It's a working day")
+    }
+};
+
+function assignment31_34task5() {
+    var today = new Date();
+    if (today.getDate() < 16) {
+        alert("First fifteen days of the month");
+    } else {
+        alert("Last days of the month")
+    }
+};
+
+
+function assignment31_34task6() {
 
 };
 
-function assignmenttask3() {
+function assignment31_34task7() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+
+    var newformat = hours >= 12 ? 'PM' : 'AM';
+
+    hours = hours % 12;
+
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    alert("It's " + newformat)
 
 };
 
-function assignmenttask4() {
+function assignment31_34task8() {
+    var laterDate = new Date();
+    laterDate.setFullYear(2020, 11, 31);
+    document.write("Later Date: " + laterDate)
+};
+
+function assignment31_34task9() {
+
+
 
 };
 
-function assignmenttask4() {
+function assignment31_34task10() {
+
+}
+
+
+function assignment31_34task11() {
 
 };
 
-// ****************************************************1st ASSIGNMENT ENDS************************************************************
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function assignmenttask1() {
+function assignment31_34task12() {
 
 };
 
-function assignmenttask2() {
+function assignment31_34task13() {
 
 };
 
-function assignmenttask3() {
+function assignment31_34task14() {
+    var customerName = prompt("Eenter Your Name");
+    var currentMonth = prompt("Eenter Your Current Month");
+    var numUnits = prompt("Eenter Your  Number of units ");
+    var chargesUnit = prompt(" Charges per unit ");
+    var latePayment = 350;
+    var netAmount = numUnits * chargesUnit;
+
+    var grossAmount = netAmount + latePayment;
+
+
+    document.write("Customer Name : " + customerName + "<br>" + "Month : " + currentMonth + "<br>" + "Number of units : " + numUnits + "<br>" + "Charges per unit : " + chargesUnit + "<br>")
+    document.write(" Net Amount Payable (within Due Date) : " + netAmount + "<br>" + " Late Payment Surcharge : " + latePayment + "<br>" + " Gross Amount Payable (after Due Date) : " + grossAmount)
+};
+
+
+// ****************************************************ASSIGNMENT # 31-34 ENDS************************************************************
+
+
+
+
+function assignment35_38task1() {
+    var a = new Date();
+    document.write(a);
+};
+function assignment35_38task2() {
+    function greeting() {
+        var fName = prompt("Enter Your First Name");
+        var lName = prompt("Enter Your Last Name");
+
+        var fullName = fName + " " + lName;
+
+        alert("How are you ? " + fullName)
+    }
+    greeting();
+};
+
+function assignment35_38task3() {
+
+
+    function add() {
+        var a = prompt("Enter First Number");
+        var b = prompt("Enter Second Number");
+        var result = Number(a) + Number(b);
+
+        alert(result);
+    }
+    add()
+
 
 };
 
-function assignmenttask4() {
+function assignment35_38task4() {
 
 };
 
-function assignmenttask4() {
+function assignment35_38task5() {
+    var number = prompt("Enter a number for square")
+    function square(number) {
+        alert(number)
+    }
+
+    square(number * number)
+};
+
+
+function assignment35_38task6() {
+
+    function factorial(x) {
+
+        if (x === 0) {
+            return 1;
+        }
+        return x * factorial(x - 1);
+
+    }
+    var num = prompt("ENter number for factorials")
+    alert(factorial(num));
 
 };
 
-// ****************************************************1st ASSIGNMENT ENDS************************************************************
+function assignment35_38task7() {
+    var a = prompt ("Enter the number where do you want to start the counting");
+    var b = prompt ("Enter the number where do you want to stop the counting")
+    var text = "";
+    
+    for (var i = a; i <= b; i++) {
+      text +=  i + "<br>";
+    }
+    document.write(text)
+  
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function assignmenttask1() {
+function assignment35_38task8() {
 
 };
 
-function assignmenttask2() {
+function assignment35_38task9() {
 
 };
 
-function assignmenttask3() {
+function assignment35_38task10() {
 
 };
 
-function assignmenttask4() {
+
+function assignment35_38task11() {
 
 };
 
-function assignmenttask4() {
+function assignment35_38task12() {
 
 };
 
-// ****************************************************1st ASSIGNMENT ENDS************************************************************
+function assignment35_38task13() {
+
+};
+
+function assignment35_38task14() {
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // ****************************************************ASSIGNMENT # 35-38 ENDS************************************************************
 
 
